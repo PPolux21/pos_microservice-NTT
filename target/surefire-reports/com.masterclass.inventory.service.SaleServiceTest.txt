@@ -1,4 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: com.masterclass.inventory.service.SaleServiceTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.905 s -- in com.masterclass.inventory.service.SaleServiceTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.269 s <<< FAILURE! -- in com.masterclass.inventory.service.SaleServiceTest
+com.masterclass.inventory.service.SaleServiceTest.rejectsWhenStockIsInsufficient -- Time elapsed: 4.162 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.masterclass.inventory.exception.BusinessException
+but was:
+  java.lang.IllegalArgumentException: Insufficient stock
+	at com.masterclass.inventory.entity.Product.decreaseStock(Product.java:4)
+	at com.masterclass.inventory.service.SaleService.create(SaleService.java:2)
+	at com.masterclass.inventory.service.SaleServiceTest.lambda$rejectsWhenStockIsInsufficient$0(SaleServiceTest.java:2)
+	...(80 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.masterclass.inventory.service.SaleServiceTest.rejectsWhenStockIsInsufficient(SaleServiceTest.java:2)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
