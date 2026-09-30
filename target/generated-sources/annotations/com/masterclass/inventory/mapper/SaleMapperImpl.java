@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-09-09T13:44:43-0600",
-    comments = "version: 1.6.3, compiler: Eclipse JDT (IDE) 3.46.100.v20260826-1225, environment: Java 25.0.4 (Eclipse Adoptium)"
+    date = "2026-09-30T02:04:50-0600",
+    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.12.1 (Eclipse Adoptium)"
 )
 @Component
 public class SaleMapperImpl implements SaleMapper {
