@@ -34,11 +34,19 @@ services:
     depends_on:
       sqlserver:
         condition: service_healthy
+      sqlserver-init:
+        condition: service_completed_successfully
     environment:
       SPRING_DATASOURCE_URL: "jdbc:sqlserver://sqlserver:1433;databaseName=grocery_inventory;encrypt=true;trustServerCertificate=true"
       SPRING_DATASOURCE_USERNAME: "sa"
       SPRING_DATASOURCE_PASSWORD: "YourStrongPassword123!"
     ports:
       - "8080:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:8080/actuator/health || exit 1"]
+      interval: 10s
+      retries: 20
+      start_period: 60s
+    restart: unless-stopped
 volumes:
   sqlserver_data:

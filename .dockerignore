@@ -1,0 +1,9 @@
+.git
+.gitignore
+.vscode
+target
+*.log
+docs
+ci
+path.java
+README.md
