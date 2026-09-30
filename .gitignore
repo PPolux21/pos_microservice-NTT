@@ -1,0 +1,52 @@
+# Maven / Java build output
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven wrapper / plugin caches one should not commit
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+*.log
+logs/
+
+# Spring Boot devtools restart trigger (local only)
+.reloadtrigger
+
+# IDE - VS Code
+.vscode/
+
+# IDE - IntelliJ / Eclipse / NetBeans
+.idea/
+*.iml
+*.iws
+*.ipr
+.settings/
+.classpath
+.project
+nbproject/
+nb-configuration.xml
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local environment / secrets (never commit)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Misc temp files
+*.tmp
+*.bak
+*.orig
+*.rej
+*~
+# Pasted console log committed by mistake (not source code)
+path.java
